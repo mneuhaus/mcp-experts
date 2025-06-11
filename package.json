@@ -1,6 +1,6 @@
 {
   "name": "mcp-experts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server providing multiple AI experts with specialized knowledge",
   "main": "dist/server.js",
   "type": "module",
@@ -16,7 +16,13 @@
     "mcp-experts": "dist/server.js",
     "mcp-experts-setup": "bin/setup.js"
   },
-  "keywords": ["mcp", "ai", "experts", "model-context-protocol", "llm"],
+  "keywords": [
+    "mcp",
+    "ai",
+    "experts",
+    "model-context-protocol",
+    "llm"
+  ],
   "author": "mneuhaus",
   "repository": {
     "type": "git",
