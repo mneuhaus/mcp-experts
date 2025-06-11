@@ -1,0 +1,48 @@
+{
+  "name": "mcp-experts",
+  "version": "1.0.0",
+  "description": "MCP server providing multiple AI experts with specialized knowledge",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsc && node dist/server.js",
+    "prepublishOnly": "pnpm build",
+    "postinstall": "node -e \"console.log('\\nTo get started:\\n1. Copy experts-config.yaml to your project\\n2. Set up your API keys\\n3. Run: npx mcp-experts\\n')\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mcp-experts": "dist/server.js",
+    "mcp-experts-setup": "bin/setup.js"
+  },
+  "keywords": ["mcp", "ai", "experts", "model-context-protocol", "llm"],
+  "author": "mneuhaus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mneuhaus/mcp-experts.git"
+  },
+  "homepage": "https://github.com/mneuhaus/mcp-experts",
+  "bugs": {
+    "url": "https://github.com/mneuhaus/mcp-experts/issues"
+  },
+  "license": "ISC",
+  "files": [
+    "dist/**/*",
+    "bin/**/*",
+    "experts-config.yaml",
+    ".env.example",
+    "README.md"
+  ],
+  "packageManager": "pnpm@10.11.1",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.25.62"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.0.1",
+    "typescript": "^5.8.3"
+  }
+}
